@@ -1,0 +1,140 @@
+<svg width="800" height="240" viewBox="0 0 800 240" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
+  <!-- No background - transparent -->
+  
+  <!-- Logo Icon -->
+  <g transform="translate(30, 40)">
+    <!-- Outer rotating ring -->
+    <circle cx="80" cy="80" r="75" stroke="url(#gradient1)" stroke-width="2" opacity="0.3">
+      <animateTransform
+        attributeName="transform"
+        attributeType="XML"
+        type="rotate"
+        from="0 80 80"
+        to="360 80 80"
+        dur="8s"
+        repeatCount="indefinite"/>
+    </circle>
+    
+    <!-- Middle pulsing ring -->
+    <circle cx="80" cy="80" r="63" stroke="url(#gradient2)" stroke-width="3" opacity="0.5">
+      <animate attributeName="opacity" values="0.3;0.7;0.3" dur="2s" repeatCount="indefinite"/>
+      <animate attributeName="r" values="61;65;61" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    
+    <!-- Inner core with gradient -->
+    <circle cx="80" cy="80" r="52" fill="url(#coreGradient)" filter="url(#glow)">
+      <animate attributeName="r" values="52;55;52" dur="3s" repeatCount="indefinite"/>
+    </circle>
+    
+    <!-- Neural network nodes - center -->
+    <circle cx="80" cy="80" r="7" fill="white">
+      <animate attributeName="r" values="7;9;7" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    
+    <!-- Neural network nodes - corners -->
+    <circle cx="57" cy="57" r="5" fill="white" opacity="0.9"/>
+    <circle cx="103" cy="57" r="5" fill="white" opacity="0.9"/>
+    <circle cx="57" cy="103" r="5" fill="white" opacity="0.9"/>
+    <circle cx="103" cy="103" r="5" fill="white" opacity="0.9"/>
+    
+    <!-- Connecting lines with animation -->
+    <g stroke="white" stroke-width="2" opacity="0.6">
+      <line x1="80" y1="80" x2="57" y2="57">
+        <animate attributeName="opacity" values="0.4;0.8;0.4" dur="2s" begin="0s" repeatCount="indefinite"/>
+      </line>
+      <line x1="80" y1="80" x2="103" y2="57">
+        <animate attributeName="opacity" values="0.4;0.8;0.4" dur="2s" begin="0.5s" repeatCount="indefinite"/>
+      </line>
+      <line x1="80" y1="80" x2="57" y2="103">
+        <animate attributeName="opacity" values="0.4;0.8;0.4" dur="2s" begin="1s" repeatCount="indefinite"/>
+      </line>
+      <line x1="80" y1="80" x2="103" y2="103">
+        <animate attributeName="opacity" values="0.4;0.8;0.4" dur="2s" begin="1.5s" repeatCount="indefinite"/>
+      </line>
+    </g>
+  </g>
+  
+  <!-- Text: AREA ZERO -->
+  <text x="220" y="125" fill="url(#textGradient)" font-family="'Inter', Arial, sans-serif" font-weight="900" font-size="72" letter-spacing="-2">
+    AREA ZERO
+    <animate attributeName="opacity" values="0.95;1;0.95" dur="3s" repeatCount="indefinite"/>
+  </text>
+  
+  <!-- Underline animation -->
+  <line x1="220" y1="142" x2="720" y2="142" stroke="url(#lineGradient)" stroke-width="3" stroke-linecap="round" opacity="0.8">
+    <animate attributeName="x2" values="220;720;220" dur="4s" repeatCount="indefinite"/>
+  </line>
+  
+  <!-- Subtitle: AI SOFTWARE HOUSE -->
+  <text x="318" y="185" fill="#00FFA3" font-family="'Inter', Arial, sans-serif" font-weight="600" font-size="22" letter-spacing="5" opacity="0.9">
+    AI SOFTWARE HOUSE
+    <animate attributeName="opacity" values="0.7;1;0.7" dur="2.5s" repeatCount="indefinite"/>
+  </text>
+  
+  <!-- Sparkle effects -->
+  <g opacity="0.8">
+    <circle cx="210" cy="95" r="2.5" fill="#00D9FF">
+      <animate attributeName="opacity" values="0;1;0" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="730" cy="110" r="2.5" fill="#00FFA3">
+      <animate attributeName="opacity" values="0;1;0" dur="2.5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="250" cy="75" r="2.5" fill="#00D9FF">
+      <animate attributeName="opacity" values="0;1;0" dur="3s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="690" cy="155" r="2.5" fill="#00FFA3">
+      <animate attributeName="opacity" values="0;1;0" dur="2.2s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+  
+  <!-- Gradients and Effects -->
+  <defs>
+    <linearGradient id="gradient1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#00D9FF;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#00FFA3;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="gradient2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#00FFA3;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#00D9FF;stop-opacity:1" />
+    </linearGradient>
+    
+    <radialGradient id="coreGradient" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#00D9FF;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#00FFA3;stop-opacity:1" />
+    </radialGradient>
+    
+    <linearGradient id="textGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#00D9FF;stop-opacity:1">
+        <animate attributeName="stop-color" values="#00D9FF;#00FFA3;#00D9FF" dur="5s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="100%" style="stop-color:#00FFA3;stop-opacity:1">
+        <animate attributeName="stop-color" values="#00FFA3;#00D9FF;#00FFA3" dur="5s" repeatCount="indefinite"/>
+      </stop>
+    </linearGradient>
+    
+    <linearGradient id="lineGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#00D9FF;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#00FFA3;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#00D9FF;stop-opacity:1" />
+    </linearGradient>
+    
+    <radialGradient id="bgGlow1" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#00D9FF;stop-opacity:0.4" />
+      <stop offset="100%" style="stop-color:#00D9FF;stop-opacity:0" />
+    </radialGradient>
+    
+    <radialGradient id="bgGlow2" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#00FFA3;stop-opacity:0.3" />
+      <stop offset="100%" style="stop-color:#00FFA3;stop-opacity:0" />
+    </radialGradient>
+    
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+</svg>
